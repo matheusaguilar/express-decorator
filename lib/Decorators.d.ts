@@ -1,0 +1,14 @@
+export declare const ROUTE_PATH_KEY: string;
+export declare const METHOD_KEY: string;
+export declare const NEXT: string;
+export declare const GET: string;
+export declare const POST: string;
+export declare const PUT: string;
+export declare const DELETE: string;
+export declare const PATCH: string;
+export declare function get(path: string): (target: any, key: string) => any;
+export declare function post(path: string): (target: any, key: string) => any;
+export declare function put(path: string): (target: any, key: string) => any;
+export declare function del(path: string): (target: any, key: string) => any;
+export declare function patch(path: string): (target: any, key: string) => any;
+export declare function next(func: Function): (target: any, key: string) => any;
