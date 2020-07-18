@@ -1,7 +1,9 @@
 {
   "name": "graphql-decorator",
   "version": "1.0.0",
-  "description": "",
+  "description": "Decorators to use with Express Routing",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
     "clean": "gulp",
     "build": "npm run clean && tsc",
@@ -10,7 +12,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "Matheus Catarino de Aguilar <matcatarino@yahoo.com.br>",
   "license": "ISC",
   "dependencies": {},
   "devDependencies": {
