@@ -2,8 +2,8 @@
   "name": "graphql-decorator",
   "version": "1.0.0",
   "description": "Decorators to use with Express Routing",
-  "main": "lib/index.js",
-  "types": "lib/index.d.ts",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
   "scripts": {
     "clean": "gulp",
     "build": "npm run clean && tsc",
