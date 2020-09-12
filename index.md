@@ -1,37 +1,30 @@
-## Welcome to GitHub Pages
+## Express-Decorator
 
-You can use the [editor on GitHub](https://github.com/matheusaguilar/express-decorator/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+Typescript decorators for Node Express.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### Decorators Methods
+get, post, put, del, patch, next 
 
-### Markdown
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### Example
+```javascript
+import * as http from 'http';
+import express from 'express';
+import { get, loadRoute } from 'express-decorator';
 
-```markdown
-Syntax highlighted code block
+export class ExampleRoute {
+  @get('/')
+  async test(req, res) {
+    res.status(200).send("Ok");
+  }
+}
 
-# Header 1
-## Header 2
-### Header 3
+const app = express();
+app.use('/', loadRoute(new ExampleRoute()));
 
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+const httpServer = new http.Server(app);
+const PORT = 8080;
+httpServer.listen(PORT, () => {
+  console.log(`Server listening on port ${PORT}!`);
+});
 ```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/matheusaguilar/express-decorator/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
