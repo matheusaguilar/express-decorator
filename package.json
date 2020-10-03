@@ -1,6 +1,6 @@
 {
   "name": "@magn/express-decorator",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Typescript Decorators to use with Express Routing",
   "keywords": ["Typescript", "typescript", "Express", "express", "Decorator", "decorator"],
   "author": "Matheus Catarino de Aguilar <matcatarino@yahoo.com.br>",
@@ -13,7 +13,7 @@
   "bugs": {
     "url": "https://github.com/matheusaguilar/express-decorator/issues"
   },
-  "homepage": "https://github.com/matheusaguilar/express-decorator#readme",
+  "homepage": "https://matheusaguilar.github.io/express-decorator/",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
   "scripts": {
@@ -40,6 +40,9 @@
     "reflect-metadata": "^0.1.13",
     "typescript": "^3.8.3",
     "validate-commit-msg": "^2.14.0"
+  },
+  "peerDependencies": {
+    "reflect-metadata": "0.x"
   },
   "config": {
     "commitizen": {
