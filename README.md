@@ -3,18 +3,37 @@
 Typescript decorators for Node Express.
 
 ### Decorators Methods
-get, post, put, del, patch, next 
-
+GET, POST, PUT, DELETE, PATCH, NEXT 
 
 ### Example
 ```javascript
 import * as http from 'http';
 import express from 'express';
-import { get, loadRoute } from 'express-decorator';
+import { get, post, put, del, patch, next, loadRoute } from 'express-decorator';
+
+function validateUser(req, res, next) {
+  next(); 
+}
 
 export class ExampleRoute {
-  @get('/')
-  async test(req, res) {
+  @get('/') 
+  async getInfo(req, res) {
+    res.status(200).send("Ok");
+  }
+
+  @post('/')
+  async createInfo(req, res) {
+    res.status(200).send("Ok");
+  }
+
+  @put('/')
+  async updateInfo(req, res) {
+    res.status(200).send("Ok");
+  }
+
+  @next(validateUser)
+  @del('/')
+  async deleteInfo(req, res) {
     res.status(200).send("Ok");
   }
 }
