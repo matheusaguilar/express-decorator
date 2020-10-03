@@ -1,7 +1,19 @@
 {
-  "name": "@maguine/express-decorator",
+  "name": "@magn/express-decorator",
   "version": "1.0.0",
   "description": "Typescript Decorators to use with Express Routing",
+  "keywords": ["Typescript", "typescript", "Express", "express", "Decorator", "decorator"],
+  "author": "Matheus Catarino de Aguilar <matcatarino@yahoo.com.br>",
+  "license": "MIT",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matheusaguilar/express-decorator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/matheusaguilar/express-decorator/issues"
+  },
+  "homepage": "https://github.com/matheusaguilar/express-decorator#readme",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
   "scripts": {
@@ -11,10 +23,6 @@
     "commit": "git-cz",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["Typescript", "typescript", "Express", "express", "Decorator", "decorator"],
-  "author": "Matheus Catarino de Aguilar <matcatarino@yahoo.com.br>",
-  "license": "MIT",
-  "private": false,
   "dependencies": {},
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^2.28.0",
