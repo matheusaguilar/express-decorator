@@ -24,27 +24,27 @@ function createRoutePath(path, method) {
   };
 }
 
-export function get(path: string) {
+export function Get(path: string) {
   return createRoutePath(path, GET);
 }
 
-export function post(path: string) {
+export function Post(path: string) {
   return createRoutePath(path, POST);
 }
 
-export function put(path: string) {
+export function Put(path: string) {
   return createRoutePath(path, PUT);
 }
 
-export function del(path: string) {
+export function Delete(path: string) {
   return createRoutePath(path, DELETE);
 }
 
-export function patch(path: string) {
+export function Patch(path: string) {
   return createRoutePath(path, PATCH);
 }
 
-export function next(func: Function) {
+export function Auth(func: Function) {
   return (target: any, key: string): any => {
     const methods: any[] = Reflect.getOwnMetadata(NEXT, target, key) || [];
     methods.unshift(func);
