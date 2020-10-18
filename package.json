@@ -1,6 +1,6 @@
 {
   "name": "@magn/express-decorator",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Typescript Decorators to use with Express Routing",
   "keywords": ["Typescript", "typescript", "Express", "express", "Decorator", "decorator"],
   "author": "Matheus Catarino de Aguilar <matcatarino@yahoo.com.br>",

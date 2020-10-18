@@ -24,7 +24,7 @@ Also don't forget to enable decorators inside tsconfig.json:
 ```
 
 ### Decorators Methods
-GET, POST, PUT, DELETE, PATCH, NEXT 
+GET, POST, PUT, DELETE, PATCH, AUTH 
 
 ### Example
 
@@ -35,7 +35,7 @@ import * as http from 'http';
 import express from 'express';
 import bodyParser from 'body-parser';
 import { Request, Response, NextFunction } from 'express';
-import { get, post, put, del, patch, next, loadRoute } from '@magn/express-decorator';
+import { Get, Post, Put, Delete, Patch, Auth, loadRoute } from '@magn/express-decorator';
 
 function createErrorMessage(message: string) {
   return JSON.stringify({ message });
@@ -58,29 +58,29 @@ function validatePassword(req: Request, res: Response, next: NextFunction) {
 }
  
 export class ExampleRoute {
-  @get('/') 
+  @Get('/') 
   async getInfo(req: Request, res: Response) {
     res.status(200).send("Info");
   }
  
-  @post('/')
+  @Post('/')
   async createInfo(req: Request, res: Response) {
     res.status(200).send("Created");
   }
  
-  @put('/')
+  @Put('/')
   async updateInfo(req: Request, res: Response) {
     res.status(200).send("Updated");
   }
  
-  @next(validateId)
-  @next(validatePassword)
-  @del('/')
+  @Auth(validateId)
+  @Auth(validatePassword)
+  @Delete('/')
   async deleteInfo(req: Request, res: Response) {
     res.status(200).send("Deleted");
   }
 
-  @patch('/')
+  @Patch('/')
   async patchInfo(req: Request, res: Response) {
     res.status(200).send("Patched");
   }
